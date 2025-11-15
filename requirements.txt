@@ -18,7 +18,7 @@ tensorboard
 easydict  
 fire
 pymeshlab
-libigl==2.4.1
+libigl
 cholespy
 torch-sparse
 torch-scatter
