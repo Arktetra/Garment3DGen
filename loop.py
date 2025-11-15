@@ -93,7 +93,7 @@ def loop(cfg):
     # output video
     video = Video(cfg.output_path)
     # GL Context
-    glctx = dr.RasterizeGLContext()
+    glctx = dr.RasterizeCudaContext()
 
 
     load_mesh = get_mesh(cfg.mesh, output_path, cfg.retriangulate, cfg.bsdf)
