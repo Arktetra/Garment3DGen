@@ -60,7 +60,7 @@ def load_obj(filename, clear_ks=True, mtl_override=None):
             if len(line.split()) == 0:
                 continue
             if line.split()[0] == 'mtllib':
-                all_materials += material.load_mtl(obj_path + os.path.join(line.split()[1]), clear_ks) # Read in entire material library #obj_path
+                all_materials += material.load_mtl(obj_path + os.path.join(line.split()[1][1:]), clear_ks) # Read in entire material library #obj_path
     else:
         all_materials += material.load_mtl(mtl_override)
 
