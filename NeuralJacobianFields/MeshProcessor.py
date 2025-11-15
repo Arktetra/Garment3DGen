@@ -82,7 +82,7 @@ class MeshProcessor:
     @staticmethod
     def meshprocessor_from_file(fname, ttype, cpuonly=False, load_wks_samples=False, load_wks_centroids=False):
         if fname[-4:] == '.obj':
-            V, _, _, F, _, _ = igl.read_obj(fname)
+            V, _, _, F, _, _ = igl.readOBJ(fname)
         elif fname[-4:] == '.off':
             V,F,_ = igl.read_off(fname)
         elif fname[-4:] == '.ply':
